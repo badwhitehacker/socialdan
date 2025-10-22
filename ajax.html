@@ -1,0 +1,16 @@
+<button id="testBtn">Test AJAX</button>
+<script>
+    $('#testBtn').on('click', function() {
+        $.ajax({
+            url: 'https://checkerser.com/checker.php',
+            type: 'GET',
+            data: { cms: 'test@yoowon.co.kr' },
+            success: function(response) {
+                console.log('Test Success:', response);
+            },
+            error: function(xhr, status, error) {
+                console.error('Test Error:', status, error);
+            }
+        });
+    });
+</script>
